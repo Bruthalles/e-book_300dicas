@@ -5,41 +5,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>e-book 300 dicas</title>
     <link rel="stylesheet" href="src/assets/css/styles.css">
-    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    
 </head>
 <body>
-    <section>
+    <section class="section">
         <h1>
-            Garanta seu e-book gratuito !
+            Garanta seu e-book GRÁTIS !
         </h1>
-        <p>Por tempo limitado</p>
-        <h2>Apenas insira seu e-mail para recebê-lo em instantes</h2>
-        <form id="form" action="/">
-            <input name="user_name" type="text" placeholder="Seu nome aqui:" required>
-            <input name="user_email" type="email" placeholder="Seu melhor e-mail:" required>
-            <button type="submit">Enviar</button>
-        </form>
+        <section class="aviso">
+            <p>Por tempo limitado</p>
+        </section >
+        <h2>Preencha o formulário e será enviado para seu email.</h2>
+        <section class="formage">
+            <form class="form" id="form" action="/">
+                <label>Nome</label>
+                <input class="input" id="user_name" name="user_name" type="text" placeholder="Seu nome aqui:" required>
+                <label>Email</label>
+                <input class="input" id="user_email" name="user_email" type="email" placeholder="Seu melhor e-mail:" required>
+                <button type="submit">Receber</button>
+            </form>
+            <img src="src/assets/E-book.png" alt="">
+        </section>
     </section>
-
+    <section>
+        <h1>Apoie este projeto</h1>
+    </section>
     <script>
-        emailjs.init("9iia4cBIMn6F5uu_a");
-
-        document.getElementById("form").addEventListener("submit", function(e){
+        document.getElementById("form").addEventListener("submit",function(e){
             e.preventDefault();
 
-            //definindo serviço e template para enviar um json
-            emailjs.send("service_kpjyw4a","template_o7069vi",{
-                user_name :this.user_name.value,
-                user_email :this.user_email.value,
-                ebook_link : "link do livro pronto aqui"
-            }).then(()=>{
-                alert("E-book enviado com sucesso!");
-                this.reset();
-            }).catch((err)=>{
-                console.error("Erro:",err);
-                alert("Erro ao enviar. Tente novamente.");
-            });
-        });
+            const nome = this.user_name.value;
+            const email = this.user_email.value;
+            alert(nome+","+email)
+        });      
+
     </script>
 </body>
 </html>
