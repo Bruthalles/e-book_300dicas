@@ -1,3 +1,68 @@
 body{
-    background-color: rgb(125, 112, 241);
+    background-color: rgb(51, 49, 70);
+    justify-items: center;
+}
+h1{
+    color: rgb(175, 212, 245);
+    font-size: 300%;
+    margin-bottom: 0;
+}
+.aviso{
+    background-color: red;
+    padding-right: 40%;
+    padding-bottom: 0;
+    padding-left: 15px;
+    padding-right: 60%;
+    justify-items: center;
+}
+h2{
+    color: rgb(175, 212, 245);
+    padding-top: 10%;
+}
+p{
+    font-size: 20px;
+    color: white;
+    margin-top: 0;
+    
+}
+.section{
+    justify-items: left;
+    padding-bottom: 2%;
+}
+.form{
+    display: flex;
+    flex-direction:column;
+    padding: 7%;
+    padding-bottom: 20%;
+    
+    border-radius: 20px;
+    background-color: rgb(103, 154, 248);
+}
+.formage{
+    display: flex;
+    justify-items: left;
+    flex-direction: row;
+    padding-bottom: 20%;
+    padding-left: 0;
+}
+img{
+    padding-left: 15%;
+    height: 400px;
+}
+label{
+    color: rgb(255, 51, 0);
+    font-size: 20px;
+}
+.input{
+    padding: 4%;
+    margin-bottom: 10%;
+    border-radius: 5px;
+    padding-right: 100px;
+}
+button{
+    background-color: rgb(255, 51, 0);
+    cursor: pointer;
+    padding: 5%;
+    margin-top: 25%;
+    border-radius: 10px;
 }
