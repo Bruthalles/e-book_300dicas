@@ -25,7 +25,7 @@ p{
     margin-top: 0;
     
 }
-.section{
+.space_form{
     justify-items: left;
     padding-bottom: 2%;
 }
@@ -33,7 +33,7 @@ p{
     display: flex;
     flex-direction:column;
     padding: 7%;
-    padding-bottom: 20%;
+    padding-bottom: 15%;
     
     border-radius: 20px;
     background-color: rgb(103, 154, 248);
@@ -50,8 +50,8 @@ img{
     height: 400px;
 }
 label{
-    color: rgb(255, 51, 0);
-    font-size: 20px;
+    color: #ffffff;
+    font-size: 25px;
 }
 .input{
     padding: 4%;
@@ -59,10 +59,34 @@ label{
     border-radius: 5px;
     padding-right: 100px;
 }
-button{
-    background-color: rgb(255, 51, 0);
+.input:hover{
+    background-color: rgb(179, 178, 177);
+    color: #000000;
+    border-style:ridge;
+    border-color: rgb(255, 72, 0);
+    border-width: 4px;
+    
+}
+.button{
+    --background-color: rgb(255, 245, 243);
+    background-color: var(--background-color);
     cursor: pointer;
     padding: 5%;
-    margin-top: 25%;
+    margin-top: 15%;
     border-radius: 10px;
+}
+.button:hover{
+    background-color: rgb(255, 51, 0);
+    color: #ffffff;
+    font-size: 20px;
+}
+.a{
+    color: blue;
+    align-self: center;
+    font-size: 25px;
+    padding-top: 10%;
+    padding-bottom: 0%;
+}
+.a:hover{
+    color: rgb(255,51 , 0);
 }
