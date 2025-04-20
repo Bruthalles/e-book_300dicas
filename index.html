@@ -3,12 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
+
     <title>e-book 300 dicas</title>
     <link rel="stylesheet" href="src/assets/css/reset.css">
     <link rel="stylesheet" href="src/assets/css/styles.css">
     
 </head>
 <body>
+    <header>
+        <a href="#footer">Sobre mim</a>
+    </header>
+    
+    <div id="sidebar" class="sidebar">
+        <span class="fechar" onclick="fecharSidebar()">X</span>
+        <h2>hello</h2>
+        <p>nome: Thalles</p>
+    </div>
+
     <section id="home" class="space_form">
         <h1>
             Garanta seu e-book GRÁTIS !
@@ -32,29 +45,47 @@
 
     <section class="sect_apoie" id="apoie">
         <h1>Torne-se parte de uma equipe onde a meta é sempre estender a mão.</h1>
-        <h1>Apoie este projeto!</h1>
+
+        <h1 class="apoie">Apoie este projeto!</h1>
+
         <h2>Maneiras de apoiar:</h2>
-        <ul>
+
+        <ul class="ul">
             <li><p>Você pode ajudar na criação de mais conteúdo como esse contribuindo com qualquer valor escaneando o QR-code a seguir:</p></li>
-            <img src="" alt="qrcode">
+
+            <img class="qrcode" src="" alt="qrcode">
+
             <li><p>Todos merecem algo bom de verdade. Compartilhe com amigos para que eles também aprendam coisas novas.</p></li>
+
             <li><p>Não perca novidades! Acompanhe nossas informações nas redes sociais:</p></li>
-            <ul>
-                <li><a href="">instagram</a></li>
-                <li><a href="">linkedin</a></li>
+
+            <ul class="redes">
+
+                <li class="li"><a class="a" href="https://www.linkedin.com/in/thalles-brumatti-13047226a/" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
+
+                <li class="li"><a class="a" href="https://www.instagram.com/bruthalles.exe/" target="_blank">
+                    <i class="fab fa-instagram"></i>
+                </a></li>
+
+                
                 
             </ul>
         </ul>
         
     </section>
 
-
-
-
-
-
-
+    <footer id="footer">
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laborum praesentium sit culpa quae inventore repudiandae eos aspernatur, fuga neque similique eveniet, deleniti veniam minus. Inventore nostrum sint neque nemo expedita?</p>
+    </footer>
     <script>
+        function abrirSidebar(){
+            document.getElementById("sidebar").classList.add("aberta");
+        }
+        function fecharSidebar(){
+            document.getElementById("sidebar").classList.remove("aberta");
+        }
+
+
         document.getElementById("form").addEventListener("submit",function(e){
             e.preventDefault();
 
