@@ -39,7 +39,7 @@
                 <button class="button" type="submit"><strong>Receber</strong></button>
                 <a class="a" href="#apoie"><strong>Apoie este projeto</strong></a>
             </form>
-            <img src="src/assets/E-book.png" alt="">
+            <img src="src/assets/images/E-book.png" alt="">
         </section>
     </section>
 
@@ -78,21 +78,19 @@
         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laborum praesentium sit culpa quae inventore repudiandae eos aspernatur, fuga neque similique eveniet, deleniti veniam minus. Inventore nostrum sint neque nemo expedita?</p>
     </footer>
     <script>
-        function abrirSidebar(){
-            document.getElementById("sidebar").classList.add("aberta");
-        }
-        function fecharSidebar(){
-            document.getElementById("sidebar").classList.remove("aberta");
-        }
+        
+        const user_name = document.getElementById("user_name").value;
+        const user_email = document.getElementById("user_email").value;
+    
+        const response = await fetch ("backend.onrender",{
+            method: "POST",
+            headers:{"Content-Type": "application/json"},
+            body: JSON.stringify({user_name,user_email})
+        });
 
-
-        document.getElementById("form").addEventListener("submit",function(e){
-            e.preventDefault();
-
-            const nome = this.user_name.value;
-            const email = this.user_email.value;
-            alert(nome+","+email)
-        });      
+        const data = await response.json();
+        alert(data.message);
+        
 
     </script>
 </body>
