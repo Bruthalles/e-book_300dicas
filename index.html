@@ -79,17 +79,32 @@
     </footer>
     <script>
         
+        const form = document.getElementById("form");
         const user_name = document.getElementById("user_name").value;
         const user_email = document.getElementById("user_email").value;
     
-        const response = await fetch ("backend.onrender",{
-            method: "POST",
-            headers:{"Content-Type": "application/json"},
-            body: JSON.stringify({user_name,user_email})
-        });
+        form.addEventListener("submit",async function (e) {
+            e.preventDefault();
 
-        const data = await response.json();
-        alert(data.message);
+            const name = document.getElementById("user_name").value;
+            const email = document.getElementById("user_email").value;
+
+            try{
+                const response = await fetch("https://server-node-20rv.onrender.com",{
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify({name,email})
+                });
+
+                const data = await response.json();
+                alert(data.message);
+            } catch (err){
+                alert("erro ao enviar o emai. Tente novamente mais tarde.");
+            }
+            
+        });
         
 
     </script>
