@@ -149,6 +149,13 @@ label{
 .sect_apoie{
     padding-bottom: 40%;
 }
+.btn-Qr{
+    cursor: pointer;
+    background: none;
+    color: red;
+    font-size: 20px;
+    text-decoration: underline;
+}
 .sect_apoie h1{
     padding-top: 80px;
     text-align: center;
@@ -188,27 +195,27 @@ footer{
     display: flex;
     flex-direction: row;
 }
+
+
+
+
+
+
 .divqr{
-    background-color: aqua;
-    margin: 0;
-    padding: 2%;
-    border-radius: 20px;
-    display: flex;
-    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: none;
+    position: fixed;
+    z-index: 0;
+    left: 0;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
     align-items: center;
-}
-.divqr div{
-    background-color: white;
-    border-radius: 20px;
+    justify-content: center;
 }
 .divqr img {
-    align-self: center;
-    width: 50%px;
-    height: 50%px;
-    padding-right: 8dvh;
-}
-.divlink{
-    background-color: aquamarine;
-    margin: 10%;
-    padding: 10%;
+    padding-top: 250px;
+    width: 50%;
+    height: auto;
 }
